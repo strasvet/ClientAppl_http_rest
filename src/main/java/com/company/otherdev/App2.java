@@ -1,17 +1,12 @@
-package com.company;
+package com.company.otherdev;
 
-import com.company.core.PostMan;
 import com.company.core.PostMan2;
 import com.company.dto.ItemResponse;
 import com.company.dto.LoginRequest;
-import com.company.dto.RegistrationResponse;
 import com.company.entities.NewUser;
 import com.company.entities.User;
 import com.company.model.Select;
 import com.company.model.Settings;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sun.org.apache.xpath.internal.SourceTree;
 import lombok.SneakyThrows;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -21,9 +16,7 @@ import org.springframework.web.client.RestTemplate;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 
 public class App2 {
 

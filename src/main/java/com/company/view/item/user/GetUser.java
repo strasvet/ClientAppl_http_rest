@@ -35,7 +35,7 @@ public class GetUser extends Item {
         Settings.url.put("userId", id);
         User user = (User) PostMan2.getPostman(Settings.url.get("user"), HttpMethod.GET,entity,Select.user);
         if(user!=null) {
-            inputOutput.put((String.format("%s %s", user.getFirstName(), user.getLastName())));
+            inputOutput.put((String.format("[ %s, %s %s ]",user.getEmail(), user.getFirstName(), user.getLastName())));
         }else{
             inputOutput.put("This id: \""+id+ "\" - is not found on server");
         }

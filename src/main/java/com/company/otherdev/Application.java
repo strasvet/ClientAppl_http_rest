@@ -1,4 +1,4 @@
-package com.company;
+package com.company.otherdev;
 
 import com.company.dto.RegistrationResponse;
 import com.company.entities.NewUser;

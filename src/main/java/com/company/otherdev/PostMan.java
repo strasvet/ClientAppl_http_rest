@@ -1,4 +1,4 @@
-package com.company.core;
+package com.company.otherdev;
 
 import com.company.dto.ErrorResponse;
 import com.company.dto.RegistrationResponse;

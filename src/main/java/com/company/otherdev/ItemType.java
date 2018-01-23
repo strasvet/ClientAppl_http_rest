@@ -1,4 +1,4 @@
-package com.company.model;
+package com.company.otherdev;
 
 public enum ItemType {
     TASK,

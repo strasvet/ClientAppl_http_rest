@@ -37,7 +37,8 @@ public class GetItem extends Item {
         ItemResponse itemResponse =(ItemResponse) PostMan2.getPostman(Settings.url.get("item"),HttpMethod.GET, entity,Select.item);
         //System.out.println(itemResponse);
         if(itemResponse!=null) {
-            inputOutput.put(itemResponse);
+            //inputOutput.put(itemResponse);
+            inputOutput.put(String.format(" Id:%s\n Status:%s\n CreateDate:%s\n Description:%s\n Type:%s\n Title:%s\n Author%s\n e-mail:%s\n ",itemResponse.getId(),itemResponse.getItemStatus(),itemResponse.getCreatedDate(),itemResponse.getDescription(),itemResponse.getItemType(),itemResponse.getTitle(),itemResponse.getUser().getLastName(),itemResponse.getUser().getEmail()));
         }else{
             inputOutput.put("Is item id: \""+id+"\" not found..");
         }

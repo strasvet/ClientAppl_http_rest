@@ -30,7 +30,7 @@ public class GetAllItems extends Item {
         headers.set("Authorization", System.getProperty("SESSION_ID"));
         HttpEntity<ItemResponse>entity = new HttpEntity<ItemResponse>(null, headers);
         List<ItemResponse> itemResponse =(List<ItemResponse>) PostMan2.getPostman(Settings.url.get("items"),HttpMethod.GET, entity,Select.items);
-        itemResponse.forEach(x-> inputOutput.put(String.format("[ %s ]",x)));
+        itemResponse.forEach(x-> inputOutput.put(String.format(" Id:%s\n Status:%s\n CreateDate:%s\n Description:%s\n Type:%s\n Title:%s\n Author%s\n e-mail:%s\n ",x.getId(),x.getItemStatus(),x.getCreatedDate(),x.getDescription(),x.getItemType(),x.getTitle(),x.getUser().getLastName(),x.getUser().getEmail())));
 
     }
 }
